@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Marker</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+</head>
+<body>
+<main>
+<section>
+    <div class="container my-5 py-3">
+        <h1 class="text-center mb-5">Bookmarker</h1>
+        <hr class="mb-5">
+        <h4 class="text-center mb-5"><i class="fa-solid fa-bookmark"></i>
+            Bookmark your favorite sites
+            <i class="fa-solid fa-bookmark"></i>
+        </h4>
+    
+    <div class="mb-4">
+        <label class="mb-2"><h6><i class="fa-solid fa-bookmark"></i>
+            Site Name
+            </h6>
+        </label>
+        <br>
+        <input
+        type="text"
+        id="siteName"
+        class="form-control"
+        placeholder="Bookmark Name"
+        oninput="ValidationName()">
+    </div>
+    <div class="mb-4">
+        <label class="mb-2"><h6><i class="fa-solid fa-link"></i>
+            Site URL
+            </h6>
+        </label>
+        <br>
+        <input
+        type="url"
+        id="SiteURL"
+        class="form-control"
+        placeholder="Website URL"
+        oninput="validationURL()">
+    </div>
+    <div class="text-center">
+        <button onclick="addBookmark()" class="btn btn-danger px-5">Submit</button>
+    </div>
+    <hr class="my-5">
+</div>
+</section>
+<section>
+    <table class="table text-center ">
+<thead>
+    <tr>
+        <th>Index</th>
+        <th>Website Name</th>
+        <th>Visit</th>
+        <th>Delete</th>
+    </tr>
+</thead>
+<tbody id="tableContent"></tbody>
+    </table>
+</section>
+</main>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js" defer></script>
+</body>
+</html>
